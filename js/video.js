@@ -1,5 +1,7 @@
 define(function(require,exports,moduel){
-//自制视频播放停止
+/*========================================================*/    
+/* 自制视频播放停止
+/*========================================================*/
 function videoShow(){
 	var likeNav=document.getElementById('like_s3_nav');
   var oV = document.getElementById('v1');

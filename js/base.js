@@ -1,6 +1,8 @@
 define(function(require,exports,moduel){
-
-	//var oMain=document.getElementById('main'); 
+/*========================================================*/    
+/* 所有效果集合
+/*========================================================*/
+	
 	var oReturn=document.getElementById('return');
     var proNav=document.getElementById('product_s3_nav');
     var proPage=document.getElementById('page');
@@ -19,6 +21,7 @@ define(function(require,exports,moduel){
      require('./canvas.js').autoCanvas();
      require('./wheel.js').dragDown(btn,oCon,aLiw);
      require('./wheel.js').mouWheel(btn,oCon,aLiw);
+     require('./load.js').load();
      require('./move.js').bindEvent(window,'scroll',function(){
         require('./index.js').scrollClass();//顶部导航随着滚动条滚动加上红色背景
        });

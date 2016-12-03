@@ -93,7 +93,7 @@ function startMove(obj,json,times,fx,fn){
 			return getComputedStyle(obj,false)[attr];
 		}
 	}
-	
+	exports.getStyle=getStyle;
 
 	
 	var Tween = {

@@ -1,5 +1,8 @@
 define(function(require,exports,moudel){
-//自制滚动条
+/*========================================================*/    
+/* 自制滚动条
+/*========================================================*/
+
     function dragDown(btn,oCon,oLi)
     {  
         var btnBg=btn.parentNode;
