@@ -6,22 +6,7 @@ define(function(require,exports,module){
 		var oPro3 = document.getElementById('progressText');
         var clintHeight=document.documentElement.clientHeight;
         var allWidth = parseInt(require('./move.js').getStyle(oPro1,'width'));
-
-        oProMain.style.height=clintHeight+'px';
-        oPro1.style.top=(clintHeight-oPro1.offsetHeight)/2+'px';
-
-		setTimeout(function(){
-	         require('./move.js').startMove(oProMain,{opacity:0},function(){
-	         	oProMain.style.height=0+'px';
-	         });
-	         require('./move.js').startMove(oPro1,{opacity:0},function(){
-	         	oPro1.style.height=0+'px';
-	         });
-		},1500);
-
-
 		var iNow = 0;
-
 		var timer = setInterval(function(){
 		
 			if(iNow==100){
@@ -42,6 +27,20 @@ define(function(require,exports,module){
 			oPro3.innerHTML = cent + '%';
 			oPro2.style.clip = 'rect(0px, '+ cent/100 * allWidth +'px, 40px, 0px)';		
 		};
+
+		
+        oProMain.style.height=clintHeight+'px';
+        oPro1.style.top=(clintHeight-oPro1.offsetHeight)/2+'px';
+
+		setTimeout(function(){
+	         require('./move.js').startMove(oProMain,{opacity:0},function(){
+	         	oProMain.style.height=0+'px';
+	         });
+	         require('./move.js').startMove(oPro1,{opacity:0},function(){
+	         	oPro1.style.height=0+'px';
+	         });
+		},1500);
+
 
 		
 	};
